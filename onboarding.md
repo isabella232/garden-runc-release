@@ -44,6 +44,7 @@ NOTE: most calendar invites should be tied to the cf-garden@ mailing list
 
 - [ ] Join #garden on cloudfoundry.slack.com (go to https://slack.cloudfoundry.org if they need an invite)
 - [ ] Add them to the @gardenteam @gardencore groups
+- [ ] Add them to the #garden-core private channel
 - [ ] **If they are a Pivotal employee**: Add to the cf-garden pivotal slack and ensure they are part of the @garden team (may require an ask ticket)
 
 ### Pair Up

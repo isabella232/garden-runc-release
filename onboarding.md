@@ -5,7 +5,7 @@ read through the educational material.
 
 # Checklist
 
-1. Create a new [github issue](https://github.com/cloudfoundry/garden-runc-release/issues/new)
+1. Create a new [github issue](https://github.com/cloudfoundry/garden-wiki/issues/new)
 1. Use "Onboard {github username}" for the title
 1. Copy paste the markdown below into the description
 1. Use the [Onboarding email template](https://sites.google.com/a/pivotal.io/cloud-foundry/home/cf-onboarding-offboarding/onboarding-templates) for the ask requests.

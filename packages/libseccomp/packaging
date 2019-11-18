@@ -1,12 +1,21 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-version="2.4.1"
+version="2.5.0"
 
-tar zxf "libseccomp/libseccomp-${version}.tar.gz"
+apt-get -y install autoconf libtool git
 
-cd "libseccomp-${version}"
+rm -rf libseccomp
 
+git clone https://github.com/seccomp/libseccomp.git
+cd libseccomp
+# Okay, this is pretty annoying. According to libseccomp maintainers they hardcode
+# the version to 0.0.0 in master intentionally in order to prevent accidental use. When
+# the seccomp go wraper used by runc finds seccomp version 0.0.0 it freaks out. In order to
+# workaround this we change the version in configure.ac to 2.5.0 before running the vuild
+sed -i 's/0\.0\.0/2.5.0/g' configure.ac
+
+./autogen.sh
 ./configure "--prefix=${BOSH_INSTALL_TARGET}"
 make
 make install

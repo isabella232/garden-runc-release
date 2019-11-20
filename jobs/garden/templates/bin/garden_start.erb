@@ -45,9 +45,6 @@ log "configuring xfs: done"
 <% if p("garden.containerd_mode") -%>
 source /var/vcap/jobs/garden/bin/containerd_utils
 
-log "containerd starting"
-start_containerd
-log "containerd started"
 <% end %>
 
 exec 1> >( tee -a $LOG_DIR/garden.stdout.log | logger -p user.info -t vcap.garden ) \

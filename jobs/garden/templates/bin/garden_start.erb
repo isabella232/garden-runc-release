@@ -84,6 +84,7 @@ log "running setup: done"
 <% end %>
 
 log "running gdn"
+export GOOGLE_APPLICATION_CREDENTIALS="$GARDEN_CONFIG_DIR/gcp.json"
 $exec_command /var/vcap/packages/guardian/bin/gdn \
   --config "$GARDEN_CONFIG_PATH" \
   server \

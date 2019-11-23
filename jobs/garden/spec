@@ -9,6 +9,7 @@ templates:
   bin/envs.erb:                             bin/envs
   config/garden-default:                    config/garden-default
   config/bpm.yml.erb:                       config/bpm.yml
+  config/gcp.json.erb:                      config/gcp.json
   bin/auplink:                              bin/auplink
   bin/overlay-xfs-setup:                    bin/overlay-xfs-setup
   bin/grootfs-utils.erb:                    bin/grootfs-utils
@@ -208,6 +209,10 @@ properties:
   garden.experimental_use_containerd_mode_for_processes:
     description: "(Under development) Use containerd for container process management. Must be used with containerd_mode also set to true. NOTE: cannot be used in combination with bpm or rootless"
     default: false
+
+  garden.gcp_tracing_credentials_json:
+    description: if you want to stackdriver trace from outside gcp, include a service account json here with cloud trace agent role
+    default: {}
 
   grootfs.log_level:
     description: "Log level for grootfs - can be debug, info, error or fatal."

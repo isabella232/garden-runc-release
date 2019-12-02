@@ -2,28 +2,6 @@ root = "/var/vcap/data/containerd/root"
 state = "/var/vcap/data/containerd/state"
 subreaper = true
 oom_score = -999
-disabled_plugins = [
-  "aufs",
-  "devmapper",
-  "overlayfs",
-  "zfs",
-  "walking",
-  "scheduler",
-  "diff-service",
-  "images-service",
-  "namespaces-service",
-  "snapshots-service",
-  "diff",
-  "healthcheck",
-  "images",
-  "namespaces",
-  "snapshots",
-  "version",
-  "cri",
-  "leases",
-  "leases-service",
-  "restart",
-]
 
 [grpc]
 <% if p("garden.experimental_rootless_mode") -%>

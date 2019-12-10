@@ -12,3 +12,5 @@ make cf
 make prefix="${BOSH_INSTALL_TARGET}/bin" install
 
 chmod u+s "${BOSH_INSTALL_TARGET}/bin/tardis"
+
+cp -R integration/assets/oci-test-image/grootfs-busybox "${BOSH_INSTALL_TARGET}/rootfs"

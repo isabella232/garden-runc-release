@@ -222,7 +222,7 @@ properties:
     default: []
 
   grootfs.skip_mount:
-    description: "Do not mount image root filesystem automatically, just return the mount information."
+    description: "DEPRECATED - grootfs no longer mounts rootfs. Do not mount image root filesystem automatically, just return the mount information."
     default: false
 
   grootfs.graph_cleanup_threshold_in_mb:

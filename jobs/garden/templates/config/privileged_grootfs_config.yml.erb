@@ -8,7 +8,7 @@ metron_endpoint: 127.0.0.1:<%= dropsonde_port %>
 <% end %>
 
 create:
-  without_mount: true
+  without_mount: <%= p("grootfs.skip_mount") %>
   insecure_registries: <%= p("garden.insecure_docker_registry_list").any? ? p("garden.insecure_docker_registry_list") : p("grootfs.insecure_docker_registry_list") %>
   skip_layer_validation: true
   clean_log_file: "/var/vcap/sys/log/garden/groot.clean.log"
